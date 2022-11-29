@@ -21,7 +21,7 @@ apt -qq -yy install --no-install-recommends \
 
 ### Download Source
 
-git clone --depth 1 --branch $MAUIKIT_DOCUMENTS_BRANCH https://invent.kde.org/maui/mauikit-calendar.git
+git clone --depth 1 --branch $MAUIKIT_CALENDAR_BRANCH https://invent.kde.org/maui/mauikit-calendar.git
 
 rm -rf mauikit-calendar/{LICENSE,README.md,licenses}
 
