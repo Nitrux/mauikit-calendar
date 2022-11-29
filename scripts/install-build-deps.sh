@@ -30,4 +30,5 @@ $APT_COMMAND install -qy --no-install-recommends \
     lintian \
     qtbase5-dev \
     qtdeclarative5-dev \
+    libkf5akonadicontact-dev \
     qtquickcontrols2-5-dev
