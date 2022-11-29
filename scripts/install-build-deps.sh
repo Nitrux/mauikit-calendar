@@ -26,6 +26,7 @@ $APT_COMMAND install -qy --no-install-recommends \
     libkf5coreaddons-dev \
     libkf5i18n-dev \
     libkf5kio-dev \
+    libqt5svg5-dev \
     lintian \
     qtbase5-dev \
     qtdeclarative5-dev \
