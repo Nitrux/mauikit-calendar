@@ -31,4 +31,5 @@ $APT_COMMAND install -qy --no-install-recommends \
     qtbase5-dev \
     qtdeclarative5-dev \
     libkf5akonadicontact-dev \
+    libkf5calendarsupport-dev \
     qtquickcontrols2-5-dev
