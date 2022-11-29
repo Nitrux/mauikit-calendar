@@ -21,7 +21,7 @@ apt -qq -yy install --no-install-recommends \
 
 ### Download Source
 
-git clone --depth 1 --branch $MAUIKIT_ACCOUNTS_BRANCH https://invent.kde.org/maui/mauikit-calendar.git
+git clone --depth 1 --branch $MAUIKIT_DOCUMENTS_BRANCH https://invent.kde.org/maui/mauikit-calendar.git
 
 rm -rf mauikit-calendar/{LICENSE,README.md,licenses}
 
@@ -57,8 +57,8 @@ make install
 	'any Maui app to run on various platforms + devices,' \
 	'like Linux Desktop and Phones, Android, or Windows.' \
 	'' \
-	'This package contains the MauiKit accounts shared library, the MauiKit accounts qml module' \
-	'and the MauiKit accounts development files.' \
+	'This package contains the MauiKit calendar shared library, the MauiKit calendar qml module' \
+	'and the MauiKit calendar development files.' \
 	'' \
 	''
 
