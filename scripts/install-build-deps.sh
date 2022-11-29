@@ -28,4 +28,5 @@ $APT_COMMAND install -qy --no-install-recommends \
     libkf5i18n-dev \
     libkf5kio-dev \
     qtbase5-dev \
-    qtdeclarative5-dev
+    qtdeclarative5-dev \
+    qtquickcontrols2-5-dev
