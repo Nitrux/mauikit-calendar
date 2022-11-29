@@ -52,7 +52,7 @@ jobs:
         run: ./scripts/build-deb.sh
         env:
           PACKAGE_VERSION: ${{ inputs.packageVersion }}
-          MAUIKIT_ACCOUNTS_BRANCH: ${{ inputs.mauikitcalendarBranch }}
+          MAUIKIT_CALENDAR_BRANCH: ${{ inputs.mauikitcalendarBranch }}
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
