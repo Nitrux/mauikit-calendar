@@ -4,13 +4,13 @@ set -x
 
 ### Update sources
 
-wget -qO /etc/apt/sources.list.d/nitrux-depot.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux
-
+wget -qO /etc/apt/sources.list.d/nitrux-depot.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux.depot
 wget -qO /etc/apt/sources.list.d/nitrux-testing.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux.testing
+wget -qO /etc/apt/sources.list.d/nitrux-unison.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux.unison
 
 curl -L https://packagecloud.io/nitrux/depot/gpgkey | apt-key add -;
-curl -L https://packagecloud.io/nitrux/unison/gpgkey | apt-key add -;
 curl -L https://packagecloud.io/nitrux/testing/gpgkey | apt-key add -;
+curl -L https://packagecloud.io/nitrux/unison/gpgkey | apt-key add -;
 
 apt -qq update
 
@@ -75,7 +75,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-calendar-git \
-	--requires="libc6,mauikit-git \(\>= 3.1.0+git\),libkf5akonadiagentbase5,libkf5akonadicalendar5abi1,libkf5akonadicontact5,libkf5akonadicore5abi2,libkf5akonadimime5,libkf5akonadinotes5,libkf5akonadiprivate5abi2,libkf5akonadiwidgets5abi1,libkf5akonadixml5,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
+	--requires="libc6,mauikit-git \(\>= 3.0.1+git\),libkf5akonadiagentbase5,libkf5akonadicalendar5,libkf5akonadicontact5,libkf5akonadicore5,libkf5akonadimime5,libkf5akonadinotes5,libkf5akonadiprivate5,libkf5akonadiwidgets5,libkf5akonadixml5,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
