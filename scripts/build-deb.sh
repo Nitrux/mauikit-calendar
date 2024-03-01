@@ -75,7 +75,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-calendar-git \
-	--requires="libc6,mauikit-git \(\>= 3.0.1+git\),libkf5akonadiagentbase5,libkf5akonadicalendar5,libkf5akonadicontact5,libkf5akonadicore5,libkf5akonadimime5,libkf5akonadinotes5,libkf5akonadiprivate5,libkf5akonadiwidgets5,libkf5akonadixml5,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
+	--requires="libc6,mauikit-git \(\>= 3.1.0+git\),libkpim5akonadiagentbase5,libkpim5akonadicalendar5,libkpim5akonadicontact5,libkpim5akonadicore5,libkpim5akonadimime5,libkpim5akonadinotes5,libkpim5akonadiprivate5,libkpim5akonadiwidgets5,libkpim5akonadixml5,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
