@@ -22,11 +22,14 @@ BUILD_DEPS='
     gnupg2
     libakonadi-dev
     libakonadi-dev-bin
+    libakonadicalendar-dev
     libakonadiserver-dev
     libkf6config-dev
     libkf6coreaddons-dev
     libkf6i18n-dev
     libkf6kio-dev
+    libkf6widgetsaddons-dev
+    libkidentitymanagement-dev
     lintian
     qt6-5compat-dev
     qt6-base-dev
