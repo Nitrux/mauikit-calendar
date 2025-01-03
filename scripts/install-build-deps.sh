@@ -35,6 +35,8 @@ BUILD_DEPS='
     qt6-base-dev
     qt6-declarative-dev
     qt6-svg-dev
+    libakonadicontact-dev
+    libkf6contacts-dev
 '
 
 $APT_COMMAND update -q
