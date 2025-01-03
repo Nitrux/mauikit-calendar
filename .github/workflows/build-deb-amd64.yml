@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     container:
-      image: debian:unstable
+      image: debian:testing
       env:
         DEBIAN_FRONTEND: noninteractive
         PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
