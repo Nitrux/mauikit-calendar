@@ -20,6 +20,9 @@ BUILD_DEPS='
     gettext
     git
     gnupg2
+    libakonadi-dev
+    libakonadi-dev-bin
+    libakonadiserver-dev
     libkf6config-dev
     libkf6coreaddons-dev
     libkf6i18n-dev
