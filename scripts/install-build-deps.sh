@@ -25,6 +25,7 @@ BUILD_DEPS='
     libkf6i18n-dev
     libkf6kio-dev
     lintian
+    qt6-5compat-dev
     qt6-base-dev
     qt6-declarative-dev
     qt6-svg-dev
