@@ -23,8 +23,11 @@ BUILD_DEPS='
     libakonadi-dev
     libakonadi-dev-bin
     libakonadicalendar-dev
+    libakonadicontact-dev
+    libakonadimime-dev
     libakonadiserver-dev
     libkf6config-dev
+    libkf6contacts-dev
     libkf6coreaddons-dev
     libkf6i18n-dev
     libkf6kio-dev
@@ -35,8 +38,6 @@ BUILD_DEPS='
     qt6-base-dev
     qt6-declarative-dev
     qt6-svg-dev
-    libakonadicontact-dev
-    libkf6contacts-dev
 '
 
 $APT_COMMAND update -q
