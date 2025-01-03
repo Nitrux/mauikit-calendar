@@ -37,6 +37,7 @@ BUILD_DEPS='
     lintian
     qt6-5compat-dev
     qt6-base-dev
+    qt6-base-private-dev
     qt6-declarative-dev
     qt6-declarative-private-dev
     qt6-svg-dev
