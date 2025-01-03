@@ -27,6 +27,7 @@ BUILD_DEPS='
     lintian
     qt6-base-dev
     qt6-declarative-dev
+    qt6-svg-dev
 '
 
 $APT_COMMAND update -q
