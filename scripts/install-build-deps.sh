@@ -1,37 +1,33 @@
 #!/bin/bash
 
 if [ "$EUID" -ne 0 ]; then
-    APT_COMMAND="sudo apt-get"
+    APT_COMMAND="sudo apt"
 else
-    APT_COMMAND="apt-get"
+    APT_COMMAND="apt"
 fi
 
+BUILD_DEPS='
+    appstream
+    automake
+    autotools-dev
+    build-essential
+    checkinstall
+    cmake
+    curl
+    devscripts
+    equivs
+    extra-cmake-modules
+    gettext
+    git
+    gnupg2
+    libkf6config-dev
+    libkf6coreaddons-dev
+    libkf6i18n-dev
+    libkf6kio-dev
+    lintian
+    qt6-base-dev
+    qt6-declarative-dev
+'
+
 $APT_COMMAND update -q
-$APT_COMMAND install -qy --no-install-recommends \
-    appstream \
-    automake \
-    autotools-dev \
-    build-essential \
-    checkinstall \
-    cmake \
-    curl \
-    devscripts \
-    equivs \
-    extra-cmake-modules \
-    gettext \
-    git \
-    gnupg2 \
-    libkf5akonadi-dev \
-    libkf5akonadimime-dev \
-    libkf5config-dev \
-    libkf5coreaddons-dev \
-    libkf5i18n-dev \
-    libkf5kio-dev \
-    libqt5svg5-dev \
-    lintian \
-    qtbase5-dev \
-    qtdeclarative5-dev \
-    libkf5akonadicontact-dev \
-    libkf5calendarsupport-dev \
-    libkf5eventviews-dev \
-    qtquickcontrols2-5-dev
+$APT_COMMAND install -qy --no-install-recommends $BUILD_DEPS

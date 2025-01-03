@@ -1,17 +1,28 @@
 #! /bin/bash
 
-set -x
+set -eu
 
 ### Update sources
 
-wget -qO /etc/apt/sources.list.d/nitrux-depot.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux
-wget -qO /etc/apt/sources.list.d/nitrux-testing.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux.testing
+mkdir -p /etc/apt/keyrings
 
-curl -L https://packagecloud.io/nitrux/depot/gpgkey | apt-key add -;
-curl -L https://packagecloud.io/nitrux/testing/gpgkey | apt-key add -;
-curl -L https://packagecloud.io/nitrux/unison/gpgkey | apt-key add -;
+curl -fsSL https://packagecloud.io/nitrux/depot/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nitrux_depot-archive-keyring.gpg
+curl -fsSL https://packagecloud.io/nitrux/testing/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nitrux_testing-archive-keyring.gpg
+curl -fsSL https://packagecloud.io/nitrux/unison/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nitrux_unison-archive-keyring.gpg
 
-apt update
+cat <<EOF > /etc/apt/sources.list.d/nitrux-depot.list
+deb [signed-by=/etc/apt/keyrings/nitrux_depot-archive-keyring.gpg] https://packagecloud.io/nitrux/depot/debian/ trixie main
+EOF
+
+cat <<EOF > /etc/apt/sources.list.d/nitrux-testing.list
+deb [signed-by=/etc/apt/keyrings/nitrux_testing-archive-keyring.gpg] https://packagecloud.io/nitrux/testing/debian/ trixie main
+EOF
+
+cat <<EOF > /etc/apt/sources.list.d/nitrux-unison.list
+deb [signed-by=/etc/apt/keyrings/nitrux_unison-archive-keyring.gpg] https://packagecloud.io/nitrux/unison/debian/ trixie main
+EOF
+
+apt -q update
 
 ### Install Package Build Dependencies #2
 
@@ -41,7 +52,7 @@ cmake \
 	-DCMAKE_VERBOSE_MAKEFILE=ON \
 	-DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu ../mauikit-calendar/
 
-make -j$(nproc)
+make -j"$(nproc)"
 
 make install
 
@@ -56,8 +67,8 @@ make install
 	'any Maui app to run on various platforms + devices,' \
 	'like Linux Desktop and Phones, Android, or Windows.' \
 	'' \
-	'This package contains the MauiKit calendar shared library, the MauiKit calendar qml module' \
-	'and the MauiKit calendar development files.' \
+	'This package contains the MauiKit calendar shared library, the MauiKit calendar QML module' \
+	'and the MauiKit calendar development headers.' \
 	'' \
 	''
 
@@ -74,7 +85,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-calendar-git \
-	--requires="libc6,mauikit-git \(\>= 3.1.0+git\),libkpim5akonadiagentbase5,libkpim5akonadicalendar5,libkpim5akonadicontact5,libkpim5akonadicore5,libkpim5akonadimime5,libkpim5akonadinotes5,libkpim5akonadiprivate5,libkpim5akonadiwidgets5,libkpim5akonadixml5,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
+	--requires="libc6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libkf6kiocore6,libqt6core6t64,libqt6qml6,libqt6sql6,mauikit-git \(\>= 4.0.1\),qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
