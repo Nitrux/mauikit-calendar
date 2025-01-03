@@ -26,6 +26,7 @@ BUILD_DEPS='
     libakonadicontact-dev
     libakonadimime-dev
     libakonadiserver-dev
+    libkcalendarutils-dev
     libkf6config-dev
     libkf6contacts-dev
     libkf6coreaddons-dev
