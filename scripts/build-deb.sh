@@ -11,9 +11,9 @@ set -e
 
 # -- Download Source
 
-git clone --depth 1 --branch "$MAUIKIT_CALENDAR_BRANCH" https://invent.kde.org/maui/mauikit-calendar.git
+git clone --depth 1 --branch "$MAUIKIT_CALENDAR_BRANCH" https://github.com/Nitrux/mauikit-calendar-src.git
 
-rm -rf mauikit-calendar/{LICENSE,README.md,licenses}
+rm -rf mauikit-calendar-src/{LICENSE,README.md,licenses}
 
 
 # -- Compile Source
@@ -34,7 +34,7 @@ cmake \
 	-DCMAKE_INSTALL_RUNSTATEDIR=/run "-GUnix Makefiles" \
 	-DCMAKE_VERBOSE_MAKEFILE=ON \
 	-DCMAKE_INSTALL_LIBDIR="/usr/lib/${HOST_MULTIARCH}" \
-	../mauikit-calendar/
+	../mauikit-calendar-src/
 
 make -j"$(nproc)"
 
