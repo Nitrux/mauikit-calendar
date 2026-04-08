@@ -61,7 +61,6 @@ chmod +x postinstall-pak
 
 checkinstall -D -y \
 	--install=no \
-	--postinstall=postinstall-pak \
 	--fstrans=yes \
 	--pkgname=mauikit-calendar \
 	--pkgversion="$PACKAGE_VERSION" \
