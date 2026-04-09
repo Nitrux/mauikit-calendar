@@ -60,21 +60,21 @@ printf '#!/bin/sh\nldconfig\n' > postinstall-pak
 chmod +x postinstall-pak
 
 checkinstall -D -y \
-	--install=no \
-	--fstrans=yes \
-	--pkgname=mauikit-calendar \
-	--pkgversion="$PACKAGE_VERSION" \
-	--pkgarch="$(dpkg --print-architecture)" \
-	--pkgrelease="1" \
-	--pkglicense=LGPL-3 \
-	--pkggroup=libs \
-	--pkgsource=mauikit-calendar \
-	--pakdir=. \
-	--maintainer=uri_herrera@nxos.org \
-	--provides=mauikit-calendar \
-	--requires="libc6,libkf6calendarcore6,libkf6configcore6,libkf6contacts6,libkf6coreaddons6,libkf6i18n6,libkf6kiocore6,libkf6widgetsaddons6,libkpim6akonadiagentbase6,libkpim6akonadicontactcore6,libkpim6akonadicontactwidgets6,libkpim6akonadicore6,libkpim6akonadimime6,libkpim6akonadiprivate6,libkpim6akonadiwidgets6,libkpim6akonadixml6,libkpim6calendarutils6,libkpim6identitymanagementcore6,libkpim6identitymanagementquick6,libkpim6identitymanagementwidgets6,libqt6core5compat6,libqt6core6t64,libqt6qml6,libqt6sql6,libqt6svg6,mauikit \(\>= 4.0.2\),qml6-module-org-kde-calendarcore,qml6-module-org-kde-contacts,qml6-module-org-kde-kidentitymanagement,qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
-	--nodoc \
-	--strip=no \
-	--stripso=yes \
-	--reset-uids=yes \
-	--deldesc=yes
+    --install=no \
+    --fstrans=yes \
+    --pkgname=mauikit-calendar \
+    --pkgversion="$PACKAGE_VERSION" \
+    --pkgarch="$(dpkg --print-architecture)" \
+    --pkgrelease="1" \
+    --pkglicense=LGPL-3 \
+    --pkggroup=libs \
+    --pkgsource=mauikit-calendar \
+    --pakdir=. \
+    --maintainer=uri_herrera@nxos.org \
+    --provides=mauikit-calendar \
+    --requires="libc6,libkf6calendarcore6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libqt6core6t64,libqt6qml6,libqt6sql6,libqt6svg6,mauikit (\>= 4.0.2),qml6-module-org-kde-calendarcore,qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
+    --nodoc \
+    --strip=no \
+    --stripso=yes \
+    --reset-uids=yes \
+    --deldesc=yes
