@@ -72,7 +72,7 @@ checkinstall -D -y \
     --pakdir=. \
     --maintainer=uri_herrera@nxos.org \
     --provides=mauikit-calendar \
-    --requires="libc6,libkf6calendarcore6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libqt6core6t64,libqt6qml6,libqt6sql6,libqt6svg6,mauikit (\>= 4.0.2),qml6-module-org-kde-calendarcore,qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
+    --requires="libc6,libkf6calendarcore6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libqt6core6t64,libqt6qml6,libqt6sql6,libqt6svg6,mauikit \(\>= 4.0.2\),qml6-module-org-kde-calendarcore,qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
     --nodoc \
     --strip=no \
     --stripso=yes \
