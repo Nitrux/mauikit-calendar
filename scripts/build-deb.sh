@@ -59,7 +59,7 @@ Priority: optional
 Architecture: ${TARGET_ARCH}
 Maintainer: uri_herrera@nxos.org
 Provides: mauikit-calendar
-Depends: libqt6quick6,libc6,libkf6calendarcore6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libqt6core6t64,libqt6qml6,libqt6sql6,libqt6svg6,libsecret-1-0,mauikit-accounts (>= 4.0.4),mauikit (>= 4.0.4),qml6-module-org-kde-calendarcore,qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes
+Depends: libqt6quick6,libc6,libkf6calendarcore6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libqt6core6t64,libqt6qml6,libqt6sql6,libqt6svg6,libsecret-1-0,mauikit-accounts (>= 4.0.5),mauikit (>= 4.0.5),qml6-module-org-kde-calendarcore,qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes
 Description: mauikit-calendar
  mauikit-calendar
 CONTROL
